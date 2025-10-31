@@ -12,7 +12,7 @@
 - Acesso a um terminal
 
 ## 1) Banco de Dados (MySQL) — Instalação simples
-1. Abra o xamppp, ligue o MySQL, clique em adm, clique em novo (para criar um novo banco de dados), clique em IMPORTAR, clique em ESCOLHER ARQUIVO, abra HOTEL/BACK-END/SQL e selecione o arquivo HOTEL.SQL. isso ira importar automaticamente todo o banco de dados.
+1. Abra o xampp, ligue o MySQL, clique em adm, clique em novo (para criar um novo banco de dados), clique em IMPORTAR, clique em ESCOLHER ARQUIVO, abra HOTEL/BACK-END/SQL e selecione o arquivo HOTEL.SQL. isso ira importar automaticamente todo o banco de dados.
    
    ou, faça o passo a seguir:
    
