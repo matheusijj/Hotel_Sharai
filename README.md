@@ -12,13 +12,17 @@
 - Acesso a um terminal
 
 ## 1) Banco de Dados (MySQL) — Instalação simples
-1. Abra seu MySQL (pode ser Workbench, phpMyAdmin ou o terminal).
-2. Rode o arquivo `BACK-END/sql/hotel.sql`.
+1. Abra o xamppp, ligue o MySQL, clique em adm, clique em novo (para criar um novo banco de dados), clique em IMPORTAR, clique em ESCOLHER ARQUIVO, abra HOTEL/BACK-END/SQL e selecione o arquivo HOTEL.SQL. isso ira importar automaticamente todo o banco de dados.
+   
+   ou, faça o passo a seguir:
+   
+2. Abra seu MySQL (pode ser Workbench, phpMyAdmin ou o terminal).
+2.1 Rode o arquivo `BACK-END/sql/hotel.sql`.
    - Terminal (Windows):
      ```bash
      mysql -u root -p < d:\HOTEL\BACK-END\sql\hotel.sql
      ```
-3. O script cria automaticamente:
+5. O script cria automaticamente:
    - Banco: `Hotel`
    - Tabelas: `quartos` (com alguns quartos de exemplo), `reservas`, `usuarios`
    - Usuário admin padrão:
@@ -42,7 +46,6 @@
      ```
    - Isso disponibiliza:
      - Front-end: http://127.0.0.1:8080/FRONT-END/index.html
-     - Back-end: http://127.0.0.1:8080/BACK-END/index.php
 
 ## 3) Área Administrativa — Acessar e usar
 1. Com o servidor PHP rodando (acima), abra no navegador:
