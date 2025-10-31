@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:wght@100;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/style.css">
+    <link rel="stylesheet" href="../BACK-END/assets/style.css">
+    
+    
+    <script src="js/validacoes.js"></script>
+
+</head>
+
+<body class="front-body">
+    <div class="page-wraper">
+        <header class="header">
+            <div class="container">
+                <div class="header-content d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/logo-light.svg"
+                            alt="logo">
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="banner">
+                <picture>
+                    <source media="(max-width: 767px)"
+                        srcset="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/banner-mobile.png"
+                        type="image/png">
+
+                    <source media="(min-width: 768px)"
+                        srcset="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/banner.png"
+                        type="image/png">
+                    <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/banner.png"
+                        alt="banner">
+                </picture>
+
+            </div>
+            <div class="section-full">
+                <div class="container">
+                    <div class="section-form">
+                        <span class="h2">Reserva</span>
+                        <form id="formReservaPasso1">
+                            <div>
+                                <label for="entrada">Entrada/Saída</label>
+                                <div class="d-flex">
+                                    <input type="date" id="entrada" name="entrada" required>
+                                    <input type="date" id="saida" name="saida" required>
+                                </div>
+                                <div class="invalid-feedback"></div>
+                            </div>
+
+                            <div>
+                                <label for="quarto">Quarto:</label>
+                                <select id="quarto" name="quarto" required>
+                                    <option value="">Selecione um quarto</option>
+                                    <option value="1">Quarto 101 - Standard</option>
+                                    <option value="2">Quarto 102 - Luxo</option>
+                                    <option value="3">Quarto 201 - Suíte</option>
+                                </select>
+                                <div class="invalid-feedback"></div>
+                            </div>
+
+                            <div class="col-xs-6 col01">
+                                <label for="adultos">Adultos:</label>
+                                <select id="adultos" name="adultos" required>
+                                    <option value="">Selecione</option>
+                                    <option value="1">1 adulto</option>
+                                    <option value="2">2 adultos</option>
+                                    <option value="3">3 adultos</option>
+                                    <option value="4">4 adultos</option>
+                                </select>
+                                <div class="invalid-feedback"></div>
+                            </div>
+
+                            <div class="col-xs-6 col02">
+                                <label for="criancas">Crianças:</label>
+                                <select id="criancas" name="criancas">
+                                    <option value="0">Nenhuma</option>
+                                    <option value="1">1 criança</option>
+                                    <option value="2">2 crianças</option>
+                                    <option value="3">3 crianças</option>
+                                    <option value="4">4 crianças</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button type="button" onclick="abrirModalCadastro()">Continuar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="section-full section02">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Sobre</h2>
+                            <h3>We will be so proud to be our guest.Lorem Ipsum is simply dummy text of the printing.
+                            </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the typesetting industry's standard dummy text ever since the when.Lorem Ipsum
+                                is simply dummy text of the printing and typesetting industry.</p>
+                            <ul class="check-list">
+                                <li>
+                                    <div>
+                                        <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-restaurante.svg"
+                                            alt="check" />
+                                        <div>
+                                            <h4>Restaurante</h4>
+                                            <p>Lorem ipsum dolor sit piscing sed nonmy</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-spa.svg"
+                                            alt="check" />
+                                        <div>
+                                            <h4>Wellness & Spa</h4>
+                                            <p>Lorem ipsum dolor sit piscing sed nonmy</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-wifi.svg"
+                                            alt="check" />
+                                        <div>
+                                            <h4>Free Wifi</h4>
+                                            <p>Lorem ipsum dolor sit piscing sed nonmy</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-jogos.svg"
+                                            alt="check" />
+                                        <div>
+                                            <h4>Espaço de jogos</h4>
+                                            <p>Lorem ipsum dolor sit piscing sed nonmy</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Saiba mais</a>
+                        </div>
+                        <div class="col-md-6 d-none d-sm-block">
+                            <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/img-sobre.png"
+                                alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-full section03">
+                <h2>Acomodações</h2>
+                <ul class="menu-list-acomodacoes">
+                    <li><a href="#" class="active">Todos</a></li>
+                    <li>/</li>
+                    <li><a href="#">Casal</a></li>
+                    <li>/</li>
+                    <li><a href="#">Solteiro</a></li>
+                    <li>/</li>
+                    <li><a href="#">Suíte</a></li>
+                </ul>
+                <div class="list-acomodacoes">
+                    <div class="item">
+                        <div class="item-content">
+                            <div class="img">
+                                <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/casal-1.png"
+                                    alt="Casal 01" />
+                                <h3>Casal 01</h3>
+                            </div>
+                            <div class="content-text">
+                                <span class="price">R$ 299,00/NOITE</span>
+                                <div class="d-flex">
+                                    <div class="descr">
+                                        <div>
+                                            <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-tamanho.svg"
+                                                alt="tamanho" />
+                                            <span><strong>tamanho:</strong> 25m²</span>
+                                        </div>
+                                        <div>
+                                            <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-adultos.svg"
+                                                alt="adultos" />
+                                            <span><strong>Adultos:</strong> 2</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-content">
+                            <div class="img">
+                                <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/casal-2.png"
+                                    alt="Casal 02" />
+                                <h3>Casal 02</h3>
+                            </div>
+                            <div class="content-text">
+                                <span class="price">R$ 499,00/NOITE</span>
+                                <div class="d-flex">
+                                    <div class="descr">
+                                        <div>
+                                            <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-tamanho.svg"
+                                                alt="tamanho" />
+                                            <span><strong>tamanho:</strong> 35m²</span>
+                                        </div>
+                                        <div>
+                                            <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-adultos.svg"
+                                                alt="adultos" />
+                                            <span><strong>Adultos:</strong> 2</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-content">
+                            <div class="img">
+                                <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/casal-3.png"
+                                    alt="Casal 03" />
+                                <h3>Casal 03</h3>
+                            </div>
+                            <div class="content-text">
+                                <span class="price">R$ 599,00/nOITE</span>
+                                <div class="d-flex">
+                                    <div class="descr">
+                                        <div>
+                                            <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-tamanho.svg"
+                                                alt="tamanho" />
+                                            <span><strong>tamanho:</strong> 50m²</span>
+                                        </div>
+                                        <div>
+                                            <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-adultos.svg"
+                                                alt="adultos" />
+                                            <span><strong>Adultos:</strong> 3</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row content-footer-01">
+                    <div class="col-md-6">
+                        <span class="title-footer">newsletter</span>
+                        <p>Never Miss Anything From Construx By Signing Up To Our Newsletter.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <form>
+                            <input type="text" placeholder="DIGITE SEU EMAIL" />
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row content-footer">
+                    <div class="col-md-3">
+                        <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/logo-light.svg"
+                            class="logo-footer" alt="logo-footer" />
+                        <p class="text-01">Today we can tell you, thanks to your passion, hard work creativity, and
+                            expertise, you
+                            delivered us the most beautiful house great looks.</p>
+                        <ul class="social-media">
+                            <li><a href="#"><img
+                                        src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/icon-facebook.svg"
+                                        alt="icon-facebook"></a></li>
+                            <li><a href="#"><img
+                                        src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/icon-rss.svg"
+                                        alt="icon-rss"></a></li>
+                            <li><a href="#"><img
+                                        src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/icon-linkedin.svg"
+                                        alt="icon-linkedin"></a></li>
+                            <li><a href="#"><img
+                                        src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/icon-google.svg"
+                                        alt="icon-google"></a></li>
+                            <li><a href="#"><img
+                                        src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/icon-instagram.svg"
+                                        alt="icon-instagram"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="content-footer">
+                            <span class="title-footer">LINKS</span>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="content-footer">
+                            <span class="title-footer">ACOMODAÇÕES</span>
+                            <ul>
+                                <li><a href="#">Classic</a></li>
+                                <li><a href="#">Superior</a></li>
+                                <li><a href="#">Delux</a></li>
+                                <li><a href="#">Master</a></li>
+                                <li><a href="#">luxury</a></li>
+                                <li><a href="#">Banquet Halls</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="content-footer">
+                            <span class="title-footer">FALE CONOSCO</span>
+                            <ul class="contacts">
+                                <li>
+                                    <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-adrress.svg"
+                                        alt="" />
+                                    <p>92 Princess Road, parkvenue,Greater<br />
+                                        London, NW18JR, United Kingdom</p>
+                                </li>
+                                <li>
+                                    <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-email.svg"
+                                        alt="" />
+                                    <p>sharandemo@gmail.com</p>
+                                </li>
+                                <li>
+                                    <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-phone.svg"
+                                        alt="" />
+                                    <p>(+0091) 912-3456-073</p>
+                                </li>
+                                <li>
+                                    <img src="https://essentialnutrition-upload-files.s3.us-east-1.amazonaws.com/pot-2025/Icon-fax.svg"
+                                        alt="" />
+                                    <p>(+0091) 912-3456-084</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center copyright">
+                    <p>© 2024 Your Company. Designed By Teste.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    
+    <div class="modal fade" id="modalCadastroHospede" tabindex="-1" aria-labelledby="modalCadastroLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCadastroLabel">Complete seus dados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formReservaPasso2">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="nome_completo" class="form-label">Nome Completo *</label>
+                                <input type="text" class="form-control" id="nome_completo" name="nome_completo" required>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">E-mail *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="cpf" class="form-label">CPF *</label>
+                                <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" required>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="telefone" class="form-label">Telefone *</label>
+                                <input type="text" class="form-control" id="telefone" name="telefone" maxlength="15" required>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <strong>Resumo da Reserva:</strong>
+                            <ul class="mb-0 mt-2">
+                                <li><strong>Quarto:</strong> <span id="resumo_quarto">-</span></li>
+                                <li><strong>Entrada:</strong> <span id="resumo_entrada">-</span></li>
+                                <li><strong>Saída:</strong> <span id="resumo_saida">-</span></li>
+                                <li><strong>Adultos:</strong> <span id="resumo_adultos">-</span></li>
+                                <li><strong>Crianças:</strong> <span id="resumo_criancas">-</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div id="mensagemErro" class="alert alert-danger d-none"></div>
+                        <div id="mensagemSucesso" class="alert alert-success d-none"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                    <button type="button" class="btn btn-primary" onclick="enviarReserva()">Confirmar Reserva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="modalDatasInvalidas" tabindex="-1" aria-labelledby="modalDatasInvalidasLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDatasInvalidasLabel">Atenção</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Data de saída deve ser posterior à data de entrada
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const hoje = new Date().toISOString().split('T')[0];
+            document.getElementById('entrada').setAttribute('min', hoje);
+            document.getElementById('saida').setAttribute('min', hoje);
+            carregarQuartos();
+
+            const entradaEl = document.getElementById('entrada');
+            const saidaEl = document.getElementById('saida');
+            const quartoEl = document.getElementById('quarto');
+
+            const debouncedCheck = debounce(verificarDisponibilidadeAtual, 400);
+            entradaEl.addEventListener('change', debouncedCheck);
+            saidaEl.addEventListener('change', debouncedCheck);
+            quartoEl.addEventListener('change', debouncedCheck);
+
+            
+            const headerEl = document.querySelector('.header');
+            const bannerEl = document.querySelector('.banner');
+            const pageWraper = document.querySelector('.page-wraper');
+
+            function updateHeaderVars() {
+                if (!headerEl) return;
+                document.documentElement.style.setProperty('--header-h', headerEl.offsetHeight + 'px');
+            }
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const fmt = new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+            document.querySelectorAll('.price').forEach(el => {
+                let txt = (el.textContent || '').toUpperCase();
+                txt = txt.replace('/NOITE', '').replace('/NORTE', '').trim();
+                const nums = txt.replace(/[^0-9]/g, '');
+                if (nums) {
+                    const n = parseInt(nums, 10);
+                    el.textContent = 'R$ ' + fmt.format(n);
+                } else {
+                    el.textContent = 'R$ 0';
+                }
+                const next = el.nextElementSibling;
+                if (!(next && next.classList && next.classList.contains('price-note'))) {
+                    const span = document.createElement('span');
+                    span.className = 'price-note';
+                    span.textContent = '/noite';
+                    el.insertAdjacentElement('afterend', span);
+                }
+            });
+        });
+
+            function onScroll() {
+                const y = window.scrollY || document.documentElement.scrollTop || 0;
+                if (headerEl) {
+                    if (y > 0) {
+                        headerEl.classList.add('is-sticky');
+                        if (pageWraper) pageWraper.classList.add('with-sticky-padding');
+                        updateHeaderVars();
+                    } else {
+                        headerEl.classList.remove('is-sticky');
+                        if (pageWraper) pageWraper.classList.remove('with-sticky-padding');
+                    }
+                }
+
+                if (bannerEl && headerEl) {
+                    const bannerBottom = bannerEl.getBoundingClientRect().top + window.scrollY + bannerEl.offsetHeight;
+                    if (y >= bannerBottom) {
+                        headerEl.classList.add('after-banner');
+                    } else {
+                        headerEl.classList.remove('after-banner');
+                    }
+                }
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', updateHeaderVars);
+            // Init
+            updateHeaderVars();
+            onScroll();
+        });
+
+        function debounce(fn, wait) {
+            let t;
+            return function(...args) {
+                clearTimeout(t);
+                t = setTimeout(() => fn.apply(this, args), wait);
+            }
+        }
+
+        async function verificarDisponibilidade(quartoId, dataEntrada, dataSaida) {
+            if (!quartoId || !dataEntrada || !dataSaida) {
+                return { disponivel: false, mensagem: 'Preencha quarto, entrada e saída' };
+            }
+            try {
+                const url = `../BACK-END/index.php?controller=reserva&action=verificarDisponibilidade&quarto_id=${encodeURIComponent(quartoId)}&entrada=${encodeURIComponent(dataEntrada)}&saida=${encodeURIComponent(dataSaida)}`;
+                const resp = await fetch(url, { method: 'GET' });
+                const data = await resp.json();
+                if (typeof data.disponivel === 'boolean') {
+                    return { disponivel: data.disponivel, mensagem: data.mensagem || (data.disponivel ? 'Disponível' : 'Indisponível') };
+                }
+               
+                if (data && data.sucesso !== undefined) {
+                    return { disponivel: !!data.sucesso, mensagem: data.mensagem || (data.sucesso ? 'Disponível' : 'Indisponível') };
+                }
+                return { disponivel: false, mensagem: 'Não foi possível verificar disponibilidade' };
+            } catch (_) {
+                return { disponivel: false, mensagem: 'Erro ao verificar disponibilidade' };
+            }
+        }
+
+        async function verificarDisponibilidadeAtual() {
+            const quarto = document.getElementById('quarto').value;
+            const entrada = document.getElementById('entrada').value;
+            const saida = document.getElementById('saida').value;
+            if (!quarto || !entrada || !saida) return;
+            const res = await verificarDisponibilidade(quarto, entrada, saida);
+            if (res.disponivel) {
+                mostrarSucesso('saida');
+            } else {
+                mostrarErro('saida', res.mensagem || 'Quarto indisponível para o período selecionado');
+            }
+        }
+
+        function carregarQuartos() {
+            const selectQuarto = document.getElementById('quarto');
+            if (!selectQuarto) return;
+
+            fetch('../BACK-END/index.php?controller=quarto&action=listarPublico')
+                .then(resp => resp.json())
+                .then(data => {
+                    const lista = Array.isArray(data) ? data : (data.quartos || []);
+                    if (!lista || lista.length === 0) return;
+
+                    const placeholder = selectQuarto.querySelector('option[value=""]')?.outerHTML || '<option value="">Selecione um quarto</option>';
+                    selectQuarto.innerHTML = placeholder;
+
+                    lista.forEach(q => {
+                        const id = q.id || q.quarto_id || q.codigo || q.ID;
+                        const numero = q.numero || q.nome || q.titulo || q.descricao || 'Quarto';
+                        const tipo = q.tipo || q.categoria || '';
+                        const texto = tipo ? `${numero} - ${tipo}` : `${numero}`;
+                        if (id != null) {
+                            const opt = document.createElement('option');
+                            opt.value = String(id);
+                            opt.textContent = texto;
+                            selectQuarto.appendChild(opt);
+                        }
+                    });
+                })
+                .catch(() => {
+                });
+        }
+
+        
+        async function abrirModalCadastro() {
+          
+            const entrada = document.getElementById('entrada').value;
+            const saida = document.getElementById('saida').value;
+            const quarto = document.getElementById('quarto').value;
+            const adultos = document.getElementById('adultos').value;
+            
+            let valido = true;
+            
+            if (!entrada) {
+                mostrarErro('entrada', 'Data de entrada é obrigatória');
+                valido = false;
+            }
+            
+            if (!saida) {
+                mostrarErro('saida', 'Data de saída é obrigatória');
+                valido = false;
+            }
+            
+            if (entrada && saida) {
+                const resultadoDatas = validarDatas(entrada, saida);
+                if (!resultadoDatas.valido) {
+                    mostrarErro('saida', resultadoDatas.mensagem);
+                    valido = false;
+                }
+            }
+            
+            if (!quarto) {
+                mostrarErro('quarto', 'Selecione um quarto');
+                valido = false;
+            }
+            
+            if (!adultos) {
+                mostrarErro('adultos', 'Selecione o número de adultos');
+                valido = false;
+            }
+            
+            if (!valido) {
+                return;
+            }
+
+            
+            const disponibilidade = await verificarDisponibilidade(quarto, entrada, saida);
+            if (!disponibilidade.disponivel) {
+                mostrarErro('saida', disponibilidade.mensagem || 'Quarto indisponível para o período selecionado');
+                return;
+            }
+            
+           
+            const quartoTexto = document.getElementById('quarto').options[document.getElementById('quarto').selectedIndex].text;
+            const criancas = document.getElementById('criancas').value || '0';
+            
+            document.getElementById('resumo_quarto').textContent = quartoTexto;
+            document.getElementById('resumo_entrada').textContent = new Date(entrada).toLocaleDateString('pt-BR');
+            document.getElementById('resumo_saida').textContent = new Date(saida).toLocaleDateString('pt-BR');
+            document.getElementById('resumo_adultos').textContent = adultos;
+            document.getElementById('resumo_criancas').textContent = criancas;
+            
+            
+            const modal = new bootstrap.Modal(document.getElementById('modalCadastroHospede'));
+            modal.show();
+        }
+
+        
+        async function enviarReserva() {
+            
+            if (!validarFormularioCompleto()) {
+                return;
+            }
+            
+            
+            const quartoIdSub = document.getElementById('quarto').value;
+            const entradaSub = document.getElementById('entrada').value;
+            const saidaSub = document.getElementById('saida').value;
+            const disponibilidadeSub = await verificarDisponibilidade(quartoIdSub, entradaSub, saidaSub);
+            if (!disponibilidadeSub.disponivel) {
+                mostrarErro('saida', disponibilidadeSub.mensagem || 'Quarto indisponível para o período selecionado');
+                return;
+            }
+
+            
+            const dados = {
+               
+                quarto_id: document.getElementById('quarto').value,
+                data_entrada: document.getElementById('entrada').value,
+                data_saida: document.getElementById('saida').value,
+                num_adultos: document.getElementById('adultos').value,
+                num_criancas: document.getElementById('criancas').value || '0',
+                
+                
+                nome_completo: document.getElementById('nome_completo').value,
+                email: document.getElementById('email').value,
+                cpf: document.getElementById('cpf').value,
+                telefone: document.getElementById('telefone').value,
+                send_email: true
+            };
+            
+           
+            fetch('../BACK-END/index.php?controller=reserva&action=criarPublica', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(dados)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    
+                    document.getElementById('mensagemSucesso').textContent = data.mensagem;
+                    document.getElementById('mensagemSucesso').classList.remove('d-none');
+                    document.getElementById('mensagemErro').classList.add('d-none');
+                    
+                
+                    document.getElementById('formReservaPasso1').reset();
+                    document.getElementById('formReservaPasso2').reset();
+                    
+                   
+                    setTimeout(() => {
+                        bootstrap.Modal.getInstance(document.getElementById('modalCadastroHospede')).hide();
+                        document.getElementById('mensagemSucesso').classList.add('d-none');
+                    }, 2000);
+                } else {
+                    
+                    document.getElementById('mensagemErro').textContent = data.mensagem;
+                    document.getElementById('mensagemErro').classList.remove('d-none');
+                    document.getElementById('mensagemSucesso').classList.add('d-none');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                document.getElementById('mensagemErro').textContent = 'Erro ao processar reserva. Tente novamente.';
+                document.getElementById('mensagemErro').classList.remove('d-none');
+            });
+        }
+    </script>
+</body>
+
+</html>
